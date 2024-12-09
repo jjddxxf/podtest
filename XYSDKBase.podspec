@@ -25,5 +25,6 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/jjddxxf/fsource.git", :tag => "0.0.2" }
   spec.vendored_frameworks = ['GASDK.framework','TYSDKCoreKit.framework','XYSDK.framework']
-
+  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  
 end
