@@ -25,5 +25,15 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/jjddxxf/fsource.git", :tag => "0.0.2" }
   spec.vendored_frameworks = 'TYSDKCoreKit.framework'
+  spec.frameworks = 'WebKit', 'StoreKit', 'CFNetwork', 'CoreTelephony', 'Security', 'SystemConfiguration', 'Accelerate', 'AuthenticationServices', 'SafariServices', 'LocalAuthentication', 'CoreGraphics'
+  spec.libraries = ['c++', 'sqlite3', 'z']
+  spec.pod_target_xcconfig = {
+    'OTHER_LDFLAGS' => '-ObjC',
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
 
+  spec.user_target_xcconfig = {
+    'OTHER_LDFLAGS' => '-ObjC',
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
 end

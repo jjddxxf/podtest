@@ -16,21 +16,27 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "XYSDK"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.author       = { "wuguoqian" => "wuguoqian@tuyoogame.com" }
   spec.license      = { :type => 'MIT', :file => 'LICENSE' }
   spec.summary      = "XYSDK is a library for performing XYZ functionality in iOS applications."
   spec.homepage     = "https://www.tuyoo.com/index"
   spec.platform     = :ios, '12.0'
 
-  spec.source       = { :git => "https://github.com/jjddxxf/fsource.git", :tag => "0.0.1" }
+  spec.source       = { :git => "https://github.com/jjddxxf/fsource.git", :tag => "0.0.2" }
   spec.vendored_frameworks = 'XYSDK.framework'
 
-  spec.frameworks = 'QuartzCore', 'CoreData'
-  spec.libraries = 'xml2', 'z'
+  spec.frameworks = 'WebKit', 'StoreKit', 'CFNetwork', 'CoreTelephony', 'Security', 'SystemConfiguration', 'Accelerate', 'AuthenticationServices', 'SafariServices', 'LocalAuthentication', 'CoreGraphics'
+  spec.libraries = ['c++', 'sqlite3', 'z']
 
+  spec.pod_target_xcconfig = {
+    'OTHER_LDFLAGS' => '-ObjC',
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
 
-#   spec.source       = { :git => "http://tygit.tuyoo.com/dev_platform/ios/projs/TDKFrameworksProject_iOS.git", :branch => "wgq_test_pod" }
-
+  spec.user_target_xcconfig = {
+    'OTHER_LDFLAGS' => '-ObjC',
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
 
 end
