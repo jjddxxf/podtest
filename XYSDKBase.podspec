@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
     spec.name         = 'XYSDKBase'
     spec.version      = '0.0.2'
-    spec.author       = { 'wu' => '409322858@qq.com' }
+    spec.author       = { 'Wu' => '409322858@qq.com' }
     spec.license      = { :type => 'MIT', :file => 'LICENSE' }
     spec.summary      = 'GASDK is a library for performing XYZ functionality in iOS applications.'
     spec.homepage     = 'https://www.tuyoo.com/index'

@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "XYSDK"
   spec.version      = "0.0.2"
-  spec.author       = { "wuguoqian" => "wuguoqian@tuyoogame.com" }
+  spec.author       = { "Wu" => "wuguoqian@tuyoogame.com" }
   spec.license      = { :type => 'MIT', :file => 'LICENSE' }
   spec.summary      = "XYSDK is a library for performing XYZ functionality in iOS applications."
   spec.homepage     = "https://www.tuyoo.com/index"
